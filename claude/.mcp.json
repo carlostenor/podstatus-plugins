@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "podstatus": {
+      "type": "http",
+      "url": "https://podstatus.com/mcp"
+    }
+  }
+}

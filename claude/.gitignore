@@ -1,0 +1,16 @@
+# Local credentials and personal client configuration
+.env
+.env.*
+*.key
+*.pem
+credentials*.json
+*.local.json
+.mcp.local.json
+.claude/settings.local.json
+.codex/
+# Local output and OS metadata
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+*.zip

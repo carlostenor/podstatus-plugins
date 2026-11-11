@@ -1,0 +1,96 @@
+![Podstatus](assets/podstatus-icon.png)
+
+# Podstatus for ChatGPT and Codex
+
+**Podcast stats for podcasters.**
+
+Podcast analytics for podcasters: track Apple Podcasts, Spotify and iVoox rankings, read listener reviews and draft client updates with Podstatus.
+
+## Connect in ChatGPT
+
+For a custom connection, open [ChatGPT Plugins](https://chatgpt.com/plugins),
+choose **Add custom MCP server**, and enter `https://podstatus.com/mcp`.
+Choose OAuth with dynamic client registration (DCR), create the plugin connection,
+then sign in on Podstatus and approve the read permissions. Do not supply a shared
+client secret or an API key. Client/workspace policies may limit custom connections.
+
+Start a new conversation and select Podstatus. Adding the remote connection tests
+the MCP tools; to load the included skill too, install this complete package using
+a supported local or workspace plugin workflow. The root `plugin.json` and
+`mcp.json` use the Agent Plugins format. Follow the current
+[OpenAI package instructions](https://developers.openai.com/plugins/build/plugins)
+for local installation. Public directory installation is available only after
+publication; this repository does not claim a live directory listing.
+
+The same Agent Plugins package works with Codex through its supported plugin
+installation workflow; no separate Codex package is needed. See the
+[OpenAI packaging reference](https://developers.openai.com/plugins/build/plugins).
+
+## What you can do
+
+- Check Apple Podcasts, Spotify and iVoox rankings, discover observed markets in one call and compare chart history.
+- Summarize listener reviews, with real quotations and source dates.
+- Explore positions for keywords already tracked in Podstatus.
+- Compare up to five tracked podcasts in one market.
+- Use OP3 downloads and audience analytics when the source is connected and data exists.
+- Draft a client update or list available Podstatus reports.
+
+You need a **Professional or Network subscription with API access enabled** in
+Podstatus. Contact [hello@podstatus.com](mailto:hello@podstatus.com) if access is
+not enabled. The plugin accesses your tracked podcasts and approved permissions;
+it is not an unrestricted podcast search or data feed.
+
+## Try these prompts
+
+- “List my tracked podcasts.”
+- “Compare my podcast's rankings this week with last week. Include the market and dates.”
+- “Summarize this month's reviews and quote two examples.”
+- “Draft a weekly client update using rankings and listener feedback.”
+
+The included `podcast-review` skill guides the assistant to resolve your podcast,
+retrieve relevant data and separate measured results from interpretation. It can
+respond in your language. If you track multiple podcasts, specify which one.
+
+## Permissions and limitations
+
+OAuth access is **read-only by default**. The six read scopes cover podcasts,
+rankings, analytics, reviews, keywords and report listings. With all six granted,
+the connection exposes sixteen tools. Data calls share your account's daily quota with
+other keys and connections; installing another client does not increase it. Protocol
+setup and pings still use minute capacity, but do not spend the daily data quota.
+
+No YouTube metrics or visual dashboard are included. Coverage depends on your
+tracked sources and available history. Missing data is unknown, not zero; OP3
+downloads are not a count of unique people. Data may be cached, so retain the
+returned measurement dates and stale flags when reporting it.
+
+Drafting text does not create a paid PDF. Generating a Podstatus report requires a
+separate `reports:write` grant, explicit confirmation and a report credit. The
+default connection does not grant that permission; asking in chat cannot add it.
+
+Manage or revoke your connection at
+[Podstatus API settings](https://podstatus.com/settings/api). For access errors,
+check activation and reconnect through the client's settings. For rate limits,
+wait for the retry interval instead of repeatedly retrying or switching keys.
+
+## Support and documentation
+
+- [MCP documentation](https://podstatus.com/docs/mcp)
+- [API documentation and support contact](https://podstatus.com/docs/api)
+- [Privacy policy](https://podstatus.com/privacy)
+- [Terms of use](https://podstatus.com/legal)
+- [Security and data handling](SECURITY.md)
+- Support: [hello@podstatus.com](mailto:hello@podstatus.com)
+
+## Package and license
+
+This repository contains only the plugin configuration, skill, documentation and
+brand icon. It does not contain the Podstatus server, customer records, credentials
+or a local service to run. The hosted endpoint must be deployed and enabled before
+sign-in can work. A public repository does not imply directory approval or listing.
+
+Package files are [MIT licensed](LICENSE), with the brand and hosted service
+excluded as explained in [NOTICE.md](NOTICE.md). See [CHANGELOG.md](CHANGELOG.md)
+and the reusable listing text in [DIRECTORY.md](DIRECTORY.md).
+
+To enable paid report generation in a separately configured client, request the existing read scopes plus `reports:write`, reconnect through OAuth, approve the credit warning, and refresh `tools/list`. Keep `reports:read` to check progress. The published package remains read-only. If your client cannot change scopes, create the report in Podstatus. Permission consent does not replace confirmation of each report.

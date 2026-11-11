@@ -1,0 +1,32 @@
+{
+  "name": "podstatus",
+  "version": "1.2.2",
+  "description": "Podcast analytics for podcasters: track Apple Podcasts, Spotify and iVoox rankings, read listener reviews and draft client updates with Podstatus.",
+  "author": {
+    "name": "Podstatus",
+    "url": "https://podstatus.com",
+    "email": "hello@podstatus.com"
+  },
+  "homepage": "https://podstatus.com/integrations/claude",
+  "license": "MIT",
+  "keywords": [
+    "podcast",
+    "podcaster",
+    "podcasts",
+    "podcasters",
+    "podcasting",
+    "podcast analytics",
+    "podcast rankings",
+    "podcast reviews",
+    "podcast reporting",
+    "Apple Podcasts",
+    "Spotify",
+    "iVoox"
+  ],
+  "displayName": "Podstatus",
+  "icon": "./assets/podstatus-icon.png",
+  "documentationUrl": "https://podstatus.com/docs/mcp",
+  "supportUrl": "https://podstatus.com/docs/api",
+  "privacyPolicyUrl": "https://podstatus.com/privacy",
+  "termsOfServiceUrl": "https://podstatus.com/legal"
+}
